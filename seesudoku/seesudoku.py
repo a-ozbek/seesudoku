@@ -27,8 +27,8 @@ print 'Model is successfully loaded.'
 # --- Interface ---
 def get_array(im_filename, return_im=False):
     """
-        Returns the sudoku array in a 9x9 numpy array
-        -1 for the empty spaces
+    Returns the sudoku array in a 9x9 numpy array
+    -1 for the empty spaces
     """
     im = io.imread(im_filename)
     digits = [_get_digit(im_crop, model_l) for im_crop in _get_crops(im)]
@@ -42,7 +42,7 @@ def get_array(im_filename, return_im=False):
 
 def get_solution_array(im_filename):
     """
-        Returns the solution 9x9 numpy array
+    Returns the solution 9x9 numpy array
     """
     array = get_array(im_filename)
     # Solve
@@ -53,7 +53,7 @@ def get_solution_array(im_filename):
 
 def get_solution_im(im_filename):
     """
-        Writes solution image to file
+    Writes solution image to file
     """    
 
     # * Get array from the image
@@ -95,7 +95,7 @@ def get_solution_im(im_filename):
 
 def _is_blank(im):
     """
-        Returns whether the there is a digit or a blank image.
+    Returns whether the there is a digit or a blank image.
     """
     
     # Take the r% center
@@ -115,10 +115,10 @@ def _is_blank(im):
 
 def _fix_crop(im):
     """
-        Centers the digit image
+    Centers the digit image
         
-        Args:
-            im: Cropped small digit image (It is assumed to have black bavk)
+    Args:
+        im: Cropped small digit image (It is assumed to have black bavk)
     """
     # Threshold the image and make it binary
     try:
@@ -148,7 +148,8 @@ def _fix_crop(im):
 
 def _get_crops(im):
     """
-        im: Whole sudoku image (It is assumed to have white background and black digits)
+    Returns cropped images as list
+    im: Whole sudoku image (It is assumed to have white background and black digits)
     """
     # Convert to grayscale
     im = color.rgb2gray(im)
