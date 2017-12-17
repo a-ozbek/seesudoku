@@ -4,7 +4,7 @@ A python package to solve sudoku from its image. Just give the sudoku image as t
 
 ## Usage
 
-Please download the models from the following links and put them inside the ```model`` folder.
+Please download the models from the following links and put them inside the ```model``` folder.
 
 * https://s3-us-west-2.amazonaws.com/model-seesudoku/model_weights.h5
 * https://s3-us-west-2.amazonaws.com/model-seesudoku/model_arch.txt
