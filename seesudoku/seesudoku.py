@@ -10,10 +10,10 @@ from PIL import ImageFont
 import solvesudoku
 
 
-CURRENT_PATH = os.getcwd()
-MODEL_ARCH_RELATIVE_PATH = 'seesudoku/model/model_arch.txt'
-MODEL_WEIGHTS_RELATIVE_PATH = 'seesudoku/model/model_weights.h5'
-FONT_RELATIVE_PATH = 'seesudoku/fontfiles/open-sans/OpenSans-Regular.ttf'
+CURRENT_PATH = os.path.abspath(os.path.dirname(__file__))
+MODEL_ARCH_RELATIVE_PATH = './model/model_arch.txt'
+MODEL_WEIGHTS_RELATIVE_PATH = './model/model_weights.h5'
+FONT_RELATIVE_PATH = './fontfiles/open-sans/OpenSans-Regular.ttf'
 
 # * Load the model
 # Load the architecture
